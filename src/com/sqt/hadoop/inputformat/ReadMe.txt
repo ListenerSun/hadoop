@@ -1,0 +1,4 @@
+1,多个文件合并到一个SequenceFile类型的文件中
+2，自定义WholeFileInputformat类，在该类中去掉用RecordReader()方法。
+3，自定义WholeRecordReader类，nextKeyValue()方法读取每个文件，进行流拷贝。拷贝的内容作为value输入到map方法中
+4，map()方法的输出进入到reduce方法中输出
