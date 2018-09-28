@@ -20,15 +20,15 @@ public class SequenceFileDriver {
     public static void main(String[] args)
         throws IOException, ClassNotFoundException, InterruptedException {
 
-        args = new String[] { "E:\\hadooptest\\SequenceFileData", "E:\\hadooptest\\SequenceFileData\\output" };
+        args = new String[] {  "E:\\hadooptest\\SequenceFileData", "E:\\hadooptest\\SequenceFileData\\output" };
 
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);
         job.setJarByClass(SequenceFileDriver.class);
 
-        // ÉèÖÃÊäÈëµÄ inputFormat
+        // è‡ªå®šä¹‰è®¾ç½®è¾“å…¥çš„ inputFormat
         job.setInputFormatClass(WholeFileInputformat.class);
-        // ÉèÖÃÊä³öµÄ outputFormat
+        // è®¾ç½®è¾“å‡ºçš„ outputFormat
         job.setOutputFormatClass(SequenceFileOutputFormat.class);
 
         job.setMapperClass(SequenceFileMapper.class);

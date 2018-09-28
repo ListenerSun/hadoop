@@ -25,6 +25,7 @@ public class WholeFileInputformat extends FileInputFormat<NullWritable,BytesWrit
         return super.isSplitable(context, filename);
     }
 
+
     @Override
     public RecordReader<NullWritable, BytesWritable> createRecordReader(InputSplit split,
         TaskAttemptContext context) throws IOException, InterruptedException {

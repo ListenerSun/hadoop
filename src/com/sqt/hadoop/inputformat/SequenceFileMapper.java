@@ -20,13 +20,15 @@ public class SequenceFileMapper extends Mapper<NullWritable, BytesWritable, Text
     protected void setup(Mapper<NullWritable, BytesWritable, Text, BytesWritable>.Context
         context)
         throws IOException, InterruptedException {
-        // 1 »ñÈ¡ÎÄ¼şÇĞÆ¬ĞÅÏ¢
+        // 1 è·å–æ–‡ä»¶åˆ‡ç‰‡ä¿¡æ¯
         FileSplit inputSplit = (FileSplit) context.getInputSplit();
-        // 2 »ñÈ¡ÇĞÆ¬Ãû³Æ
+        // 2 è·å–åˆ‡ç‰‡åç§°
         String name = inputSplit.getPath().toString();
-        // 3 ÉèÖÃ key µÄÊä³ö
+        // 3 è®¾ç½® key çš„è¾“å‡º
         k.set(name);
     }
+
+
     @Override
     protected void map(NullWritable key, BytesWritable value,
         Context context)

@@ -35,6 +35,7 @@ public class WholeRecordReader extends RecordReader<NullWritable,BytesWritable> 
     }
 
 
+
     //读取每个文件的方法
     @Override
     public boolean nextKeyValue() throws IOException, InterruptedException {
