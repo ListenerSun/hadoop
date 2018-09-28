@@ -1,0 +1,3 @@
+hello hadoop
+hello java
+hello Python
