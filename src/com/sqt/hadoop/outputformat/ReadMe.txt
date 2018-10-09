@@ -1,0 +1,3 @@
+需求：把log.txt文件中包含sqt内容的输出到sqt.log,其余的输出到other.log
+1，自定义一个OutPutFormat 来获得RecordWriter类。
+2，自定义一个FilterRecordWriter继承RecordWriter。重写RecordWriter类的方法指定内容输出到不同的文件中。
